@@ -24,6 +24,7 @@ namespace Manager
 		loggingThread.join();
 		checkQueue();
 		checkFlush();
+		std::cout.flush();
 		
 		std::scoped_lock lock(queueMutex);
 		delete alertQueue;
