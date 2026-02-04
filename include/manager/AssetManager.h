@@ -44,8 +44,8 @@ namespace Manager
                 else {
                     auto iter = registeredAssets.find(senderID);
                     if (iter == registeredAssets.end()) {
-                        Alert("No asset has given UUID.", CRITICAL); 
-                        return {};
+                        Alert(std::string("No asset has given UUID: ") + std::to_string(senderID), CRITICAL);
+                        return {nullptr};
                     }
                     asset = iter->second;
                 }
