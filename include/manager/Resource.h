@@ -111,7 +111,7 @@ namespace Manager
 
         T& operator*()
         {
-            return *(get().value());
+            return *(get().value()); // Unsafe;
         }
 
         explicit operator bool() {
